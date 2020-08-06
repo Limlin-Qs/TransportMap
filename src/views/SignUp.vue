@@ -122,13 +122,13 @@
                 this.$refs[formName].validate((valid) => {
                     if (valid) {
                         alert('submit!');
-                        let {userAccount, pass} = this.ruleForm
-                        const data = {
-                            userAccount: userAccount,
-                            userPwd: pass
-                        }
+                        //let {userAccount, pass} = this.ruleForm
+                        //const data = {
+                        //    userAccount: userAccount,
+                        //    userPwd: pass
+                        //}
                         // axios.post('http://localhost:8080/api/signUpinfo', data).then(res=>{
-                        axios.post('http://localhost:8082/backend/user/saveUser?userAccount='+this.ruleForm.userAccount+'&userPwd='+this.ruleForm.userPwd).then(res=>{
+                        axios.post('http://localhost:8082/backend/user/saveUser?userAccount='+this.ruleForm.userAccount+'&userPwd='+this.ruleForm.pass).then(res=>{
                             console.log(res.data.code)
                             if (!res.data.code) {
                             // 登录成功，页面跳转
