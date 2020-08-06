@@ -55,7 +55,6 @@
                 this.$refs.ruleForm2.validate((valid) => {
                     if(valid){
                         this.logining = true;
-                        let data = this.ruleForm2
                         axios.post('http://localhost:8082/backend/login/userLogin?userAccount='+this.ruleForm2.userAccount+'&userPwd='+this.ruleForm2.userPwd).then(res=>{
                             console.log(res)
                             if(!res.data.code){
